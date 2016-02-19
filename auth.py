@@ -17,4 +17,7 @@ def replace_line(file_name, line_num, text):
     out.close()
 
 def go():
-	GPIO.output(bad, 1)
+    GPIO.output(bad, 1)
+
+if __name__ == '__main__':
+    go()
