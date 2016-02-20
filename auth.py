@@ -25,8 +25,10 @@ def go():
 
 	if password == 'boyroom':
 		GPIO.output(good, on)
+		GPIO.output(bad, off)
 	if password != 'boyroom':
 		GPIO.output(bad, on)
+		GPIO.output(good, off)
 
 	sleep(100)
 
