@@ -32,6 +32,8 @@ def go():
 			GPIO.output(good, off)
 	
 		sleep(5)
+		GPIO.output(good, off)
+		GPIO.output(bad, on)
 
 if __name__ == '__main__':
     go()
