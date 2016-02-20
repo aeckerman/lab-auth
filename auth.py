@@ -21,16 +21,17 @@ def replace_line(file_name, line_num, text):
     out.close()
 
 def go():
-	password = input('Password: ')
-
-	if password == 'boyroom':
-		GPIO.output(good, on)
-		GPIO.output(bad, off)
-	if password != 'boyroom':
-		GPIO.output(bad, on)
-		GPIO.output(good, off)
-
-	sleep(5)
+	while True:
+		password = input('Password: ')
+	
+		if password == 'boyroom':
+			GPIO.output(good, on)
+			GPIO.output(bad, off)
+		if password != 'boyroom':
+			GPIO.output(bad, on)
+			GPIO.output(good, off)
+	
+		sleep(5)
 
 if __name__ == '__main__':
     go()
