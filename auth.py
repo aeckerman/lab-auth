@@ -1,4 +1,5 @@
 import RPi.GPIO as GPIO
+from time import sleep
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(True)
@@ -21,10 +22,13 @@ def replace_line(file_name, line_num, text):
 
 def go():
 	password = input('Password: ')
+
 	if password == 'boyroom':
 		GPIO.output(good, on)
-	else:
+	if password != 'boyroom':
 		GPIO.output(bad, on)
+
+	sleep(100)
 
 if __name__ == '__main__':
     go()
