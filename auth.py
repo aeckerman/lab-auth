@@ -30,7 +30,7 @@ def go():
 		GPIO.output(bad, on)
 		GPIO.output(good, off)
 
-	sleep(100)
+	sleep(5)
 
 if __name__ == '__main__':
     go()
