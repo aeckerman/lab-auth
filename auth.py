@@ -6,8 +6,8 @@ GPIO.setwarnings(False)
 good = 12
 bad = 11
 
-on = 1
-off = 0
+on = GPIO.HIGH
+off = GPIO.LOW
 
 GPIO.setup(good, GPIO.OUT)
 GPIO.setup(bad, GPIO.OUT)
